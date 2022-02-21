@@ -61,6 +61,6 @@ func fibonachi(firstNum: Int){
 }
 fibonachi(firstNum: 50)
 print(fibonachiMassiv)
-
+ 
 
 
