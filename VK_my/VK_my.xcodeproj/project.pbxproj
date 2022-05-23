@@ -14,6 +14,8 @@
 		029F613D28229BCF00B24FCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029F613B28229BCF00B24FCD /* Main.storyboard */; };
 		029F613F28229BD000B24FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029F613E28229BD000B24FCD /* Assets.xcassets */; };
 		029F614228229BD000B24FCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029F614028229BD000B24FCD /* LaunchScreen.storyboard */; };
+		02AB4501283B9C03008B0C41 /* avatra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB4500283B9C03008B0C41 /* avatra.swift */; };
+		02AB4503283B9CFE008B0C41 /* AvatarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AB4502283B9CFE008B0C41 /* AvatarViewController.swift */; };
 		02B809D92833C92F007AEE55 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B809D82833C92F007AEE55 /* FriendsController.swift */; };
 		02B809DD2833CADA007AEE55 /* MyGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B809DC2833CADA007AEE55 /* MyGroupController.swift */; };
 		02B809DF2833CAF4007AEE55 /* NonMyGroupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B809DE2833CAF4007AEE55 /* NonMyGroupController.swift */; };
@@ -38,6 +40,8 @@
 		029F613E28229BD000B24FCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		029F614128229BD000B24FCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		029F614328229BD000B24FCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02AB4500283B9C03008B0C41 /* avatra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatra.swift; sourceTree = "<group>"; };
+		02AB4502283B9CFE008B0C41 /* AvatarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarViewController.swift; sourceTree = "<group>"; };
 		02B809D82833C92F007AEE55 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		02B809DC2833CADA007AEE55 /* MyGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupController.swift; sourceTree = "<group>"; };
 		02B809DE2833CAF4007AEE55 /* NonMyGroupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonMyGroupController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 				02B809D82833C92F007AEE55 /* FriendsController.swift */,
 				02B809E42834B26E007AEE55 /* FriendsMyCell.swift */,
 				02B809E62834B7CA007AEE55 /* FriendsNames.swift */,
+				02AB4500283B9C03008B0C41 /* avatra.swift */,
+				02AB4502283B9CFE008B0C41 /* AvatarViewController.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -211,10 +217,12 @@
 			files = (
 				02B809E72834B7CA007AEE55 /* FriendsNames.swift in Sources */,
 				02B809E32833E1CF007AEE55 /* GroupNames.swift in Sources */,
+				02AB4503283B9CFE008B0C41 /* AvatarViewController.swift in Sources */,
 				02B809E52834B26E007AEE55 /* FriendsMyCell.swift in Sources */,
 				02B809EF28372000007AEE55 /* FotoFriendsCell.swift in Sources */,
 				029690B9282BCADE0003856F /* LoginViewController.swift in Sources */,
 				02B809D92833C92F007AEE55 /* FriendsController.swift in Sources */,
+				02AB4501283B9C03008B0C41 /* avatra.swift in Sources */,
 				029F613A28229BCF00B24FCD /* ViewController.swift in Sources */,
 				02B809E12833DE9A007AEE55 /* MyGroupCell.swift in Sources */,
 				02B809ED28371FCC007AEE55 /* FotoFriendsController.swift in Sources */,
