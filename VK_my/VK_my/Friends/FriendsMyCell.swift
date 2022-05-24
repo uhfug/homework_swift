@@ -10,4 +10,10 @@ import UIKit
 class FriendsMyCell: UITableViewCell {
     @IBOutlet weak var friendsImage: UIImageView!
     @IBOutlet weak var friiendsName: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        friendsImage.layer.cornerRadius = friendsImage.bounds.width / 2
+    }
 }

@@ -10,16 +10,19 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class FotoFriendsController: UICollectionViewController {
-    let friends = [
-        Friends(friendsImage: UIImage.init(systemName: "australsign.circle") , friendsName: "Nastya"),
-        Friends(friendsImage: UIImage.init(systemName: "arrowtriangle.right.circle.fill") , friendsName: "Itachi"),
-        Friends(friendsImage: UIImage.init(systemName: "arrow.triangle.merge") , friendsName: "Boris Elcin"),
-        Friends(friendsImage: UIImage.init(systemName: "arrow.up.and.down.and.arrow.left.and.right"), friendsName: "Vlados"),
-        Friends(friendsImage: UIImage.init(systemName: "arrow.up.circle"), friendsName: "Kril Dmitrouich"),
-        Friends(friendsImage: UIImage.init(systemName: "lightbulb.fill"), friendsName: "Anton"),
-        Friends(friendsImage: UIImage.init(systemName: "burn"), friendsName: "Aleksander"),
-        Friends(friendsImage: UIImage.init(systemName: "circle.and.line.horizontal.fill"), friendsName: "Polina"),
-            ]
+//    let friends = [
+//        Friends(friendsImage: UIImage.init(systemName: "australsign.circle") , friendsName: "Nastya"),
+//        Friends(friendsImage: UIImage.init(systemName: "arrowtriangle.right.circle.fill") , friendsName: "Itachi"),
+//        Friends(friendsImage: UIImage.init(systemName: "arrow.triangle.merge") , friendsName: "Boris Elcin"),
+//        Friends(friendsImage: UIImage.init(systemName: "arrow.up.and.down.and.arrow.left.and.right"), friendsName: "Vlados"),
+//        Friends(friendsImage: UIImage.init(systemName: "arrow.up.circle"), friendsName: "Kril Dmitrouich"),
+//        Friends(friendsImage: UIImage.init(systemName: "lightbulb.fill"), friendsName: "Anton"),
+//        Friends(friendsImage: UIImage.init(systemName: "burn"), friendsName: "Aleksander"),
+//        Friends(friendsImage: UIImage.init(systemName: "circle.and.line.horizontal.fill"), friendsName: "Polina"),
+//            ]
+//
+    var arrayFriends: [NewFriends] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,7 +55,7 @@ class FotoFriendsController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return arrayFriends.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -60,7 +63,7 @@ class FotoFriendsController: UICollectionViewController {
             preconditionFailure("Error")
         }
         
-        cell.fotoFriends.image = friends[indexPath.row].image
+        cell.fotoFriends.image = arrayFriends[indexPath.row].image
     
     
         return cell

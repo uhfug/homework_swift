@@ -12,4 +12,5 @@ class FotoFriendsCell: UICollectionViewCell {
     
     @IBOutlet weak var fotoFriends: UIImageView!
     
+    @IBOutlet weak var likeButton: UIButton!
 }

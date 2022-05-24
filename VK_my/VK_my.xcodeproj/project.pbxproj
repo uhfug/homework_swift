@@ -28,6 +28,7 @@
 		02DD91BC282E0E9F000D3CC1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD91BB282E0E9F000D3CC1 /* TableViewController.swift */; };
 		02DD91BE282E11F3000D3CC1 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD91BD282E11F3000D3CC1 /* UIViewController+extension.swift */; };
 		02DD91C0282E1C30000D3CC1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD91BF282E1C30000D3CC1 /* TabBarController.swift */; };
+		02E5A111283D1F34008F377B /* StructsFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E5A110283D1F34008F377B /* StructsFriend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		02DD91BB282E0E9F000D3CC1 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		02DD91BD282E11F3000D3CC1 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		02DD91BF282E1C30000D3CC1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		02E5A110283D1F34008F377B /* StructsFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructsFriend.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				02B809E62834B7CA007AEE55 /* FriendsNames.swift */,
 				02AB4500283B9C03008B0C41 /* avatra.swift */,
 				02AB4502283B9CFE008B0C41 /* AvatarViewController.swift */,
+				02E5A110283D1F34008F377B /* StructsFriend.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				02AB4503283B9CFE008B0C41 /* AvatarViewController.swift in Sources */,
 				02B809E52834B26E007AEE55 /* FriendsMyCell.swift in Sources */,
 				02B809EF28372000007AEE55 /* FotoFriendsCell.swift in Sources */,
+				02E5A111283D1F34008F377B /* StructsFriend.swift in Sources */,
 				029690B9282BCADE0003856F /* LoginViewController.swift in Sources */,
 				02B809D92833C92F007AEE55 /* FriendsController.swift in Sources */,
 				02AB4501283B9C03008B0C41 /* avatra.swift in Sources */,

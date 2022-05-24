@@ -20,6 +20,7 @@ class AvatarViewController: UIViewController {
         Friends(friendsImage: UIImage.init(systemName: "burn"), friendsName: "Aleksander"),
         Friends(friendsImage: UIImage.init(systemName: "circle.and.line.horizontal.fill"), friendsName: "Polina"),
             ]
+    
     @IBOutlet weak var avatarCollection: avatra!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,27 @@ class AvatarViewController: UIViewController {
         
     }
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of items
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fotoCell", for: indexPath) as? FotoFriendsCell else {
+            preconditionFailure("Error")
+        }
+        
+        cell.fotoFriends.image = friends[indexPath.row].image
+    
+    
+        return cell
+    }
 
     /*
     // MARK: - Navigation
