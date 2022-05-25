@@ -1,28 +1,17 @@
 //
-//  FotoFriendsController.swift
+//  ImageFriendCollectionViewController.swift
 //  VK_my
 //
-//  Created by Кирилл Терновский on 20.05.2022.
+//  Created by Кирилл Терновский on 25.05.2022.
 //
 
 import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class FotoFriendsController: UICollectionViewController {
-//    let friends = [
-//        Friends(friendsImage: UIImage.init(systemName: "australsign.circle") , friendsName: "Nastya"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrowtriangle.right.circle.fill") , friendsName: "Itachi"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrow.triangle.merge") , friendsName: "Boris Elcin"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrow.up.and.down.and.arrow.left.and.right"), friendsName: "Vlados"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrow.up.circle"), friendsName: "Kril Dmitrouich"),
-//        Friends(friendsImage: UIImage.init(systemName: "lightbulb.fill"), friendsName: "Anton"),
-//        Friends(friendsImage: UIImage.init(systemName: "burn"), friendsName: "Aleksander"),
-//        Friends(friendsImage: UIImage.init(systemName: "circle.and.line.horizontal.fill"), friendsName: "Polina"),
-//            ]
-//
-    var arrayFriends: [NewFriends] = []
-    
+class ImageFriendCollectionViewController: UICollectionViewController {
+
+    var arrayFriend: [NewFriends] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,16 +44,16 @@ class FotoFriendsController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return arrayFriends.count
+        return arrayFriend.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "fotoCell", for: indexPath) as? FotoFriendsCell else {
-            preconditionFailure("Error")
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionFriend", for: indexPath) as? friendCollectionViewCell else {
+            preconditionFailure("Eroro")
         }
-        
-        cell.fotoFriends.image = arrayFriends[indexPath.row].image
     
+        cell.nameFriends.text = arrayFriend[indexPath.row].name
+        cell.imageAvatar.image = arrayFriend[indexPath.row].image
     
         return cell
     }

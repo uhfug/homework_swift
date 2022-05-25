@@ -9,29 +9,20 @@ import UIKit
 
 class FriendsController: UITableViewController {
 
-//    let friends = [
-//        Friends(friendsImage: UIImage.init(systemName: "australsign.circle") , friendsName: "Nastya"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrowtriangle.right.circle.fill") , friendsName: "Itachi"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrow.triangle.merge") , friendsName: "Boris Elcin"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrow.up.and.down.and.arrow.left.and.right"), friendsName: "Vlados"),
-//        Friends(friendsImage: UIImage.init(systemName: "arrow.up.circle"), friendsName: "Kril Dmitrouich"),
-//        Friends(friendsImage: UIImage.init(systemName: "lightbulb.fill"), friendsName: "Anton"),
-//        Friends(friendsImage: UIImage.init(systemName: "burn"), friendsName: "Aleksander"),
-//        Friends(friendsImage: UIImage.init(systemName: "circle.and.line.horizontal.fill"), friendsName: "Polina"),
-//            ]
+
     let friends = [
     Friend(image: UIImage(named: "Jolin"), name: "Nastya", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Krill Dmitrouich", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Krill Dmitrouich", friend: newFriend),
     Friend(image: UIImage(named: "samurai"), name: "Alesha", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Anton", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Anton", friend: newFriend),
     Friend(image: UIImage(named: "Josef"), name: "Alexander", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Elcin", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Elcin", friend: newFriend),
     Friend(image: UIImage(named: "JosefJostar"), name: "Gats", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Aang", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Aang", friend: newFriend),
     Friend(image: UIImage(named: "japan"), name: "Masha", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Sasha", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Polina", friend: newFriend),
-    Friend(image: UIImage(named: "ded"), name: "Grigorii", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Sasha", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Polina", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Grigorii", friend: newFriend),
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,12 +59,13 @@ class FriendsController: UITableViewController {
         return cell
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showFoto",
-           let destinationVC = segue.destination as? FotoFriendsController,
+        if segue.identifier == "friendCollection",
+           let destinationVC = segue.destination as? ImageFriendCollectionViewController,
            let indexPath = tableView.indexPathForSelectedRow {
+            
             let friendName = friends[indexPath.row].name
             destinationVC.title = friendName
-            destinationVC.arrayFriends = friends[indexPath.row].friend
+            destinationVC.arrayFriend = friends[indexPath.row].friend
         }
     }
     
