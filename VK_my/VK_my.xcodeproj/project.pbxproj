@@ -26,6 +26,8 @@
 		02DD91BE282E11F3000D3CC1 /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD91BD282E11F3000D3CC1 /* UIViewController+extension.swift */; };
 		02DD91C0282E1C30000D3CC1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DD91BF282E1C30000D3CC1 /* TabBarController.swift */; };
 		02E5A111283D1F34008F377B /* StructsFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E5A110283D1F34008F377B /* StructsFriend.swift */; };
+		02F571CB283FC798005259B0 /* avatarFriendShadowUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F571CA283FC798005259B0 /* avatarFriendShadowUIView.swift */; };
+		02F571CD283FCAD6005259B0 /* likeConoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02F571CC283FCAD6005259B0 /* likeConoller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		02DD91BD282E11F3000D3CC1 /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
 		02DD91BF282E1C30000D3CC1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		02E5A110283D1F34008F377B /* StructsFriend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructsFriend.swift; sourceTree = "<group>"; };
+		02F571CA283FC798005259B0 /* avatarFriendShadowUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avatarFriendShadowUIView.swift; sourceTree = "<group>"; };
+		02F571CC283FCAD6005259B0 /* likeConoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = likeConoller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 				02E5A110283D1F34008F377B /* StructsFriend.swift */,
 				02A5D106283E812200FBFFAA /* ImageFriendCollectionViewController.swift */,
 				02A5D108283E815200FBFFAA /* friendCollectionViewCell.swift */,
+				02F571CA283FC798005259B0 /* avatarFriendShadowUIView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				02DD91BB282E0E9F000D3CC1 /* TableViewController.swift */,
 				02DD91BF282E1C30000D3CC1 /* TabBarController.swift */,
 				02DD91BD282E11F3000D3CC1 /* UIViewController+extension.swift */,
+				02F571CC283FCAD6005259B0 /* likeConoller.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02F571CD283FCAD6005259B0 /* likeConoller.swift in Sources */,
 				02B809E32833E1CF007AEE55 /* GroupNames.swift in Sources */,
 				02B809E52834B26E007AEE55 /* FriendsMyCell.swift in Sources */,
 				02A5D107283E812200FBFFAA /* ImageFriendCollectionViewController.swift in Sources */,
@@ -218,6 +225,7 @@
 				029F613A28229BCF00B24FCD /* ViewController.swift in Sources */,
 				02B809E12833DE9A007AEE55 /* MyGroupCell.swift in Sources */,
 				02B809DF2833CAF4007AEE55 /* NonMyGroupController.swift in Sources */,
+				02F571CB283FC798005259B0 /* avatarFriendShadowUIView.swift in Sources */,
 				02DD91BE282E11F3000D3CC1 /* UIViewController+extension.swift in Sources */,
 				029F613628229BCF00B24FCD /* AppDelegate.swift in Sources */,
 				02DD91C0282E1C30000D3CC1 /* TabBarController.swift in Sources */,

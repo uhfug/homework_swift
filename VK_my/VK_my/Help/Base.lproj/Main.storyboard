@@ -234,31 +234,53 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="104"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QTX-PT-4hd">
-                                            <rect key="frame" x="25" y="10" width="80" height="80"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="QTX-PT-4hd" secondAttribute="height" multiplier="1:1" id="eLu-hG-alK"/>
-                                                <constraint firstAttribute="width" constant="80" id="yho-1g-vdd"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhN-Zg-Evf">
-                                            <rect key="frame" x="125" y="39.5" width="269" height="21"/>
+                                            <rect key="frame" x="114" y="41.5" width="280" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kDg-Vo-c6V" customClass="avatarFriendShadowUIView" customModule="VK_my" customModuleProvider="target">
+                                            <rect key="frame" x="10" y="10" width="84" height="84"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="989-oV-GdZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icb-aY-76J">
+                                                    <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="989-oV-GdZ" secondAttribute="bottom" id="7lb-iC-LMb"/>
+                                                <constraint firstItem="989-oV-GdZ" firstAttribute="leading" secondItem="kDg-Vo-c6V" secondAttribute="leading" id="Ho2-Ef-h1e"/>
+                                                <constraint firstAttribute="height" constant="84" id="V5y-Jz-AZn"/>
+                                                <constraint firstAttribute="trailing" secondItem="989-oV-GdZ" secondAttribute="trailing" id="Vrj-Vm-bTh"/>
+                                                <constraint firstAttribute="width" secondItem="kDg-Vo-c6V" secondAttribute="height" multiplier="1:1" id="Wfg-hk-JuF"/>
+                                                <constraint firstAttribute="trailing" secondItem="icb-aY-76J" secondAttribute="trailing" id="Y1V-IW-Rj6"/>
+                                                <constraint firstItem="989-oV-GdZ" firstAttribute="top" secondItem="kDg-Vo-c6V" secondAttribute="top" id="bRr-Po-iec"/>
+                                                <constraint firstItem="icb-aY-76J" firstAttribute="top" secondItem="kDg-Vo-c6V" secondAttribute="top" id="i1h-os-ccG"/>
+                                                <constraint firstAttribute="bottom" secondItem="icb-aY-76J" secondAttribute="bottom" id="iCT-CF-i4m"/>
+                                                <constraint firstItem="icb-aY-76J" firstAttribute="leading" secondItem="kDg-Vo-c6V" secondAttribute="leading" id="sft-1h-HUP"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="avatarView" destination="icb-aY-76J" id="pOt-WF-4Yd"/>
+                                                <outlet property="shadowView" destination="989-oV-GdZ" id="adu-H2-gYh"/>
+                                            </connections>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QhN-Zg-Evf" firstAttribute="centerY" secondItem="QTX-PT-4hd" secondAttribute="centerY" id="JEh-3x-OrC"/>
-                                        <constraint firstAttribute="bottom" secondItem="QTX-PT-4hd" secondAttribute="bottom" priority="999" constant="10" id="Z9I-xc-fnT"/>
-                                        <constraint firstItem="QhN-Zg-Evf" firstAttribute="leading" secondItem="QTX-PT-4hd" secondAttribute="trailing" constant="20" id="iaz-oi-CGy"/>
-                                        <constraint firstItem="QTX-PT-4hd" firstAttribute="leading" secondItem="hpn-eO-teE" secondAttribute="leading" constant="25" id="lkN-ST-yRi"/>
-                                        <constraint firstItem="QTX-PT-4hd" firstAttribute="top" secondItem="hpn-eO-teE" secondAttribute="top" constant="10" id="tTI-WE-z7i"/>
+                                        <constraint firstItem="kDg-Vo-c6V" firstAttribute="top" secondItem="hpn-eO-teE" secondAttribute="top" constant="10" id="834-yr-7FY"/>
+                                        <constraint firstAttribute="bottom" secondItem="kDg-Vo-c6V" secondAttribute="bottom" constant="10" id="CPj-zO-7YQ"/>
+                                        <constraint firstItem="kDg-Vo-c6V" firstAttribute="leading" secondItem="hpn-eO-teE" secondAttribute="leading" constant="10" id="ERO-Ro-kv2"/>
+                                        <constraint firstItem="QhN-Zg-Evf" firstAttribute="centerY" secondItem="kDg-Vo-c6V" secondAttribute="centerY" id="FuL-PG-vIi"/>
+                                        <constraint firstItem="QhN-Zg-Evf" firstAttribute="leading" secondItem="kDg-Vo-c6V" secondAttribute="trailing" constant="20" id="wfQ-YT-jyX"/>
                                         <constraint firstAttribute="trailing" secondItem="QhN-Zg-Evf" secondAttribute="trailing" constant="20" id="zz9-BM-sfA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="friendsImage" destination="QTX-PT-4hd" id="jWe-hr-nBq"/>
+                                    <outlet property="friendsImage" destination="icb-aY-76J" id="7gj-xq-NNH"/>
                                     <outlet property="friiendsName" destination="QhN-Zg-Evf" id="2PL-rO-9hx"/>
                                     <segue destination="XgD-hk-yZP" kind="show" identifier="friendCollection" id="Y2b-oy-48r"/>
                                 </connections>
@@ -297,7 +319,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="293" height="286"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q7u-dY-Pa9">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hea" translatesAutoresizingMaskIntoConstraints="NO" id="q7u-dY-Pa9">
                                             <rect key="frame" x="0.0" y="0.0" width="293" height="226.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="q7u-dY-Pa9" secondAttribute="height" multiplier="1:1" id="EvL-6I-czN"/>
@@ -313,12 +335,33 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laQ-3R-txr" customClass="likeConoller" customModule="VK_my" customModuleProvider="target">
+                                            <rect key="frame" x="243" y="236" width="50" height="50"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pUe-L5-PTB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pUe-L5-PTB" secondAttribute="trailing" id="FVY-u4-Y2b"/>
+                                                <constraint firstAttribute="bottom" secondItem="pUe-L5-PTB" secondAttribute="bottom" id="OCj-1t-fyt"/>
+                                                <constraint firstItem="pUe-L5-PTB" firstAttribute="leading" secondItem="laQ-3R-txr" secondAttribute="leading" id="XXS-zL-9J4"/>
+                                                <constraint firstItem="pUe-L5-PTB" firstAttribute="top" secondItem="laQ-3R-txr" secondAttribute="top" id="adY-63-XYT"/>
+                                                <constraint firstAttribute="width" secondItem="laQ-3R-txr" secondAttribute="height" multiplier="1:1" id="ch3-lm-3jl"/>
+                                                <constraint firstAttribute="height" constant="50" id="qfx-t4-mbV"/>
+                                            </constraints>
+                                            <connections>
+                                                <outlet property="likePicture" destination="pUe-L5-PTB" id="42h-b4-zcS"/>
+                                            </connections>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="q7u-dY-Pa9" secondAttribute="trailing" id="80d-3n-biM"/>
                                         <constraint firstItem="q7u-dY-Pa9" firstAttribute="leading" secondItem="RlM-Bc-bEO" secondAttribute="leading" id="QKe-dD-jfu"/>
                                         <constraint firstItem="kYR-0n-a9j" firstAttribute="leading" secondItem="RlM-Bc-bEO" secondAttribute="leading" constant="10" id="QP4-nQ-3fi"/>
                                         <constraint firstItem="kYR-0n-a9j" firstAttribute="top" secondItem="q7u-dY-Pa9" secondAttribute="bottom" constant="16" id="bzj-QQ-myS"/>
+                                        <constraint firstAttribute="bottom" secondItem="laQ-3R-txr" secondAttribute="bottom" id="swI-kc-c2U"/>
+                                        <constraint firstAttribute="trailing" secondItem="laQ-3R-txr" secondAttribute="trailing" id="tHt-nA-Qas"/>
                                         <constraint firstAttribute="bottom" secondItem="kYR-0n-a9j" secondAttribute="bottom" constant="23" id="vT4-PK-SwI"/>
                                         <constraint firstAttribute="trailing" secondItem="kYR-0n-a9j" secondAttribute="trailing" constant="10" id="yg1-v1-GX5"/>
                                         <constraint firstItem="q7u-dY-Pa9" firstAttribute="top" secondItem="RlM-Bc-bEO" secondAttribute="top" id="z4v-PG-h8e"/>
@@ -326,7 +369,9 @@
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="293" height="286"/>
                                 <connections>
+                                    <outlet property="conteinerView" destination="RlM-Bc-bEO" id="Muj-9y-Gmt"/>
                                     <outlet property="imageAvatar" destination="q7u-dY-Pa9" id="TU6-gq-Yky"/>
+                                    <outlet property="likeControl" destination="laQ-3R-txr" id="ZqU-r5-1gJ"/>
                                     <outlet property="nameFriends" destination="kYR-0n-a9j" id="RQo-bE-twC"/>
                                 </connections>
                             </collectionViewCell>
@@ -420,6 +465,7 @@
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>
+        <image name="hea" width="128" height="128"/>
         <image name="hurricane" catalog="system" width="91" height="128"/>
         <image name="peacesign" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
