@@ -20,14 +20,17 @@ class NonMyGroupController: UITableViewController {
         Group(imageGroup: UIImage.init(systemName: "books.vertical.circle"), nameGroup: "no name"),
         Group(imageGroup: UIImage.init(systemName: "umbrella.fill"), nameGroup: "no war"),
         Group(imageGroup: UIImage.init(systemName: "suit.heart"), nameGroup: "make love"),
-        Group(imageGroup: UIImage.init(systemName: "heart.circle.fill"), nameGroup: "anime"),
+        Group(imageGroup: UIImage.init(systemName: "heart.circle.fill"), nameGroup: "Anime"),
         Group(imageGroup: UIImage.init(systemName: "command.circle"), nameGroup: "gamers"),
         Group(imageGroup: UIImage.init(systemName: "globe.asia.australia.fill"), nameGroup: "lovers")
     ]
     
+    var sortedGroups = [Character : [Group]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.sortedGroups = sort(groups: groups)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -35,27 +38,59 @@ class NonMyGroupController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
+    private func sort (groups : [Group]) -> [Character : [Group]]{
+        var groupsDict = [Character : [Group]]()
+        
+        groups.forEach { group in
+            guard let firstChar = group.name.first else {return}
+            
+            if var thisCharGroup = groupsDict[firstChar] {
+                thisCharGroup.append(group)
+                
+                groupsDict[firstChar] = thisCharGroup
+            } else {
+                groupsDict[firstChar] = [group]
+            }
+        }
+        
+        
+        return groupsDict
+    }
     // MARK: - Table view data source
 
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return sortedGroups.keys.count
+
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return groups.count
+        let keySorted = sortedGroups.keys.sorted()
+        
+        let groups = sortedGroups[keySorted[section]]?.count ?? 0
+        
+        return groups
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        String(sortedGroups.keys.sorted()[section])
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NonMyGroupCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NonMyGroupCell", for: indexPath) as! NonMyGroupCell
 
-        var contetn = cell.defaultContentConfiguration()
-        contetn.text = groups[indexPath.row].name
-        contetn.image = groups[indexPath.row].image
+        let firstChar = sortedGroups.keys.sorted()[indexPath.section]
         
-        cell.contentConfiguration = contetn
+        let groups = sortedGroups[firstChar]!
+        
+        let group: Group = groups[indexPath.row]
+        
+        
+        //let group = groups[indexPath.row]
+        
+        cell.NonMyGroupLabel.text = group.name
+        cell.NonMyGroupImage.image = group.image
         return cell
     }
     

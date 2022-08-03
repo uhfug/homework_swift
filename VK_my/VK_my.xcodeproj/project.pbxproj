@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0214CD132861AD0A0005D7EB /* NonMyGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214CD122861AD0A0005D7EB /* NonMyGroupCell.swift */; };
+		0214CD152861B09A0005D7EB /* groupAvatarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214CD142861B09A0005D7EB /* groupAvatarShadow.swift */; };
+		0214CD172861E7510005D7EB /* MyGroupAvatarShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214CD162861E7510005D7EB /* MyGroupAvatarShadow.swift */; };
 		029690B9282BCADE0003856F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029690B8282BCADE0003856F /* LoginViewController.swift */; };
 		029F613628229BCF00B24FCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F613528229BCF00B24FCD /* AppDelegate.swift */; };
 		029F613828229BCF00B24FCD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029F613728229BCF00B24FCD /* SceneDelegate.swift */; };
@@ -31,6 +34,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0214CD122861AD0A0005D7EB /* NonMyGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonMyGroupCell.swift; sourceTree = "<group>"; };
+		0214CD142861B09A0005D7EB /* groupAvatarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = groupAvatarShadow.swift; sourceTree = "<group>"; };
+		0214CD162861E7510005D7EB /* MyGroupAvatarShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupAvatarShadow.swift; sourceTree = "<group>"; };
 		029690B8282BCADE0003856F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		029F613228229BCF00B24FCD /* VK_my.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK_my.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029F613528229BCF00B24FCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +121,9 @@
 				02B809DC2833CADA007AEE55 /* MyGroupController.swift */,
 				02B809E02833DE9A007AEE55 /* MyGroupCell.swift */,
 				02B809DE2833CAF4007AEE55 /* NonMyGroupController.swift */,
+				0214CD122861AD0A0005D7EB /* NonMyGroupCell.swift */,
+				0214CD142861B09A0005D7EB /* groupAvatarShadow.swift */,
+				0214CD162861E7510005D7EB /* MyGroupAvatarShadow.swift */,
 			);
 			path = Groups;
 			sourceTree = "<group>";
@@ -222,14 +231,17 @@
 				02E5A111283D1F34008F377B /* StructsFriend.swift in Sources */,
 				029690B9282BCADE0003856F /* LoginViewController.swift in Sources */,
 				02B809D92833C92F007AEE55 /* FriendsController.swift in Sources */,
+				0214CD172861E7510005D7EB /* MyGroupAvatarShadow.swift in Sources */,
 				029F613A28229BCF00B24FCD /* ViewController.swift in Sources */,
 				02B809E12833DE9A007AEE55 /* MyGroupCell.swift in Sources */,
 				02B809DF2833CAF4007AEE55 /* NonMyGroupController.swift in Sources */,
 				02F571CB283FC798005259B0 /* avatarFriendShadowUIView.swift in Sources */,
+				0214CD132861AD0A0005D7EB /* NonMyGroupCell.swift in Sources */,
 				02DD91BE282E11F3000D3CC1 /* UIViewController+extension.swift in Sources */,
 				029F613628229BCF00B24FCD /* AppDelegate.swift in Sources */,
 				02DD91C0282E1C30000D3CC1 /* TabBarController.swift in Sources */,
 				02B809DD2833CADA007AEE55 /* MyGroupController.swift in Sources */,
+				0214CD152861B09A0005D7EB /* groupAvatarShadow.swift in Sources */,
 				02DD91BC282E0E9F000D3CC1 /* TableViewController.swift in Sources */,
 				02A5D109283E815200FBFFAA /* friendCollectionViewCell.swift in Sources */,
 				029F613828229BCF00B24FCD /* SceneDelegate.swift in Sources */,

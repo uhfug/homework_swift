@@ -16,8 +16,10 @@ class MyGroupController: UITableViewController {
             let nonMyGroupController = segue.source as! NonMyGroupController
             
             if let indexPath = nonMyGroupController.tableView.indexPathForSelectedRow {
-                let groupa = nonMyGroupController.groups[indexPath.row]
-                groupss.append(groupa)
+                let firstChar = nonMyGroupController.sortedGroups.keys.sorted()[indexPath.section]
+                let groups = nonMyGroupController.sortedGroups[firstChar]!
+                let group: Group = groups[indexPath.row]
+                groupss.append(group)
                 tableView.reloadData()
             }
         }

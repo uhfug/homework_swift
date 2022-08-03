@@ -44,7 +44,7 @@ class ImageFriendCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return arrayFriend.count
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -54,9 +54,11 @@ class ImageFriendCollectionViewController: UICollectionViewController {
     
         cell.nameFriends.text = arrayFriend[indexPath.row].name
         cell.imageAvatar.image = arrayFriend[indexPath.row].image
-    
+        
         return cell
+        
     }
+    
 
     // MARK: UICollectionViewDelegate
 

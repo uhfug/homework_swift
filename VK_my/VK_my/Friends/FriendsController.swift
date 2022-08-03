@@ -9,41 +9,68 @@ import UIKit
 
 class FriendsController: UITableViewController {
 
-
+    var arrayFriend: [NewFriends]?
     let friends = [
-    Friend(image: UIImage(named: "Jolin"), name: "Nastya", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Krill Dmitrouich", friend: newFriend),
-    Friend(image: UIImage(named: "samurai"), name: "Alesha", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Anton", friend: newFriend),
-    Friend(image: UIImage(named: "Josef"), name: "Alexander", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Elcin", friend: newFriend),
-    Friend(image: UIImage(named: "JosefJostar"), name: "Gats", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Aang", friend: newFriend),
-    Friend(image: UIImage(named: "japan"), name: "Masha", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Sasha", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Polina", friend: newFriend),
-    Friend(image: UIImage(named: "Jolin"), name: "Grigorii", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Nas Nastya", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Dmitrouich Krill", friend: newFriend),
+    Friend(image: UIImage(named: "samurai"), name: "Pof Alesha", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Bah Anton", friend: newFriend),
+    Friend(image: UIImage(named: "Josef"), name: "Zoi Alexander", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Hopkiyt Elcin", friend: newFriend),
+    Friend(image: UIImage(named: "JosefJostar"), name: "Lopjik Gats", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Avatar Aang", friend: newFriend),
+    Friend(image: UIImage(named: "japan"), name: "Koir Masha", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Froks Sasha", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Tolkr Polina", friend: newFriend),
+    Friend(image: UIImage(named: "Jolin"), name: "Pori Grigorii", friend: newFriend),
     ]
+    
+    var sortedFriends = [Character : [Friend]]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.sortedFriends = sort(friends: friends)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-
+    private func sort(friends: [Friend]) -> [Character : [Friend]] {
+        var friendsDict = [Character : [Friend]]()
+        
+        friends.forEach { friend in
+            guard let firstChar = friend.name.first else {return}
+            
+            if var thisCharFriend = friendsDict[firstChar] {
+                thisCharFriend.append(friend)
+                
+                friendsDict[firstChar] = thisCharFriend
+            } else {
+                friendsDict[firstChar] = [friend]
+            }
+        }
+        return friendsDict
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return sortedFriends.keys.count
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        String(sortedFriends.keys.sorted()[section])
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return friends.count
+        let keySorted = sortedFriends.keys.sorted()
+        
+        let friends = sortedFriends[keySorted[section]]?.count ?? 0
+        
+        return friends
     }
 
     
@@ -53,11 +80,18 @@ class FriendsController: UITableViewController {
             preconditionFailure("Error")
         }
 
-        cell.friendsImage.image = friends[indexPath.row].image
-        cell.friiendsName.text = friends[indexPath.row].name
+        let firstChar = sortedFriends.keys.sorted()[indexPath.section]
+        
+        let friends = sortedFriends[firstChar]!
+        
+        let friend: Friend = friends[indexPath.row]
+        
+        cell.friendsImage.image = friend.image
+        cell.friiendsName.text = friend.name
         
         return cell
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "friendCollection",
            let destinationVC = segue.destination as? ImageFriendCollectionViewController,
